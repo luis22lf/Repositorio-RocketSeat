@@ -1,0 +1,41 @@
+
+
+
+-tabindex="INDICE"							//define ordem dos elementos que serão selecionados ao pressionar TAB (ex:tabindex="3", terá que ser pressionado TAB 3x para selecionar o elemento)
+
+-<em>TEXTO</em>								//destaca texto digitado (usado em conjunto com alguma tag para texto)
+-<br/>									//quebra de linho no texto
+-<h1></h1>								//títulos (h1 só um por página)
+<li></li>								//lista (sempre usar em counjunto com <ol> ou <ul>)
+<ol></ol>								//ordena lista (sequência numérica)
+<ul></ul>								//lista não ordenada
+<cite> ou <q> ou <blockquote>						//usado para citações
+<abbr title="TEXTO">TEXTO ABREVIADO</abbr>				//uado para mostrar numa janelinha texto completo ao passar com mouse por cima
+<adress>								//detalhe de contato
+<dl><dt>ITEM<dt><dd>SOBRE O ITEM<dd><dl>				//lista de descrição
+<pre><code>CODIGO</code></pre>						//digitar código
+<span>									//digitar texto (é possível organizar o código com ele pois ele não quebra linha, adicionar vário, o conteudo concatena numa só linha)
+<a href="ENDEREÇO DO LINK" target="_blank">CONTEUDO</a>			//<a> é para link e target blank é para abrir em uma nova página em branco (href="mailto:..." para email e href="tel:" para telefone) (é possivel adiconar títulos, textos, imagem, outra página html que levam ao link) (quando utilizar navegação entre paginas, utilizar <nav> com <a> dentro dele)
+<a href="#NOMEID">							//leva na parte da pagina que contem o elemnto com id usado
+<a href="../NOMEARQUIVO">						// ../ sai do diretório e vai para pasta anterior
+<a href="./NOMEARQUIVO">						// ./ vai para diretório raiz
+<table>									//cria tabela (<tr> cria uma linha e <th>(cabeçalho)e<td>(restante) uma coluna nessa linha) (o cabeçalho fica dentro de <thead>, o corpo fica dentro de <tbody> e rodapé dentro de <tfoot>)
+<link>									//para adicionar icone
+<video src="CAMINHO DO VIDEO" controls></video>				//<video> adiciona o video e <controls adiciona controles (O mais recomendado é subir o vídeo para o youtube, daily... e só puxar o link pra cá)
+	Dentro da tag <video> 
+		loop							//repete video ao terminar
+		width							//define comprimento do player
+		heigth							//altura do player
+		preload="ESCOLHA"					//("auto" carrega video antes de clicar, "metadata" carrega informações básicas como tempo de vídeo, "none" não carrega nada)
+		autoplay						//começa rodando o vídeo
+		muted							//começa mutado
+		poster="CAMINHO DA FOTO"				//carrega uma foto para exibir antes do vídeo começar			
+<audio>									//adiciona audio no html (funciona semelhante ao <video>
+<iframe src="CAMINHO DO VIDEO/ AUDIO / MAPA" frameborder="0"></iframe>	//adiciona video externo ao html (forma mais recomendada) (DÁ PARA ADICIONAR MAPA DO GOOGLE MAPS)
+<img>									//adiciona imagem
+<figure <img> <figcaption>TEXTO DA IMAGEM</figcaption>>			//Figcaption é para adicionar um texto atrelado à imagem e fig une tudo
+<svg>									//imagens vetorizadas (tem que desenhar a imagem em código ou pegar algum programa que faça isso)
+
+ 
+-Caracteres especiais no texto não podem ser utilizados de maneira tradicionar por serem reservados, há comandos para poder utilizá-los se necessário
+	https://erikasarti.com/html/acentuacao-caracteres-especiais/

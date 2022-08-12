@@ -1,0 +1,65 @@
+color: 						//altera cor
+fontsize:					//altera tamanho da fonte
+background:					//altera cor de fundo
+@import						//importar fontes (para aplicar ao elemento é font-family)
+!important					//sobrescreve a propriedade independente do peso da especificidade (ex color: blue !important)
+width: calc(100% - 80px);			//responsividade
+box-sizing: border-box				//para calcular o tamanho de uma box pela distância entre bordas (por padrão é calculado pelo tamanho do conteúdo e ao adicionar padding, o tamanho pode se alterar)
+display: block					//muda comportamento de elemento inline para block (que ocupa linha toda e força próximo elemento a ficar embaixo)
+display: inline					//muda comportamento do elemento para inline (inline width e height não funcionam e somente valores horizontais de margin, padding e border)
+
+SELETORES
+
+*						//altera propriedades de todos os elementos da página (* {...})
+ELEMENTO, ELEMENTO				//altera propriedades de dois ou mais elementos (h1, h2 {...})
+.ELEMENTO					//alterar classe
+#ELEMENTO					//alterar id
+
+
+PESQUISAR
+at rules					//instruções de comportamento (importar fonte externa, animações...)
+shorthand					//escrever todas as propriedades de um elemento na mesma linha (ordem dos atributos não importa)
+
+
+BOX MODEL (caixas que possuem propriedades)
+-width						//largura
+-height						//altura
+-content					//conteudo
+-border						//borda
+-padding					//preenchimento interno
+-margin						//espaço em relação a outro elemento
+
+CORES
+-background-color				//caixas
+-color						//textos
+-border-color					//bordas
+-color:currentcolor				//define cor atual como cor (pega cor usada no elemento pai
+color:inherit					//pega cor do elemento anterior
+
+BACKGROUND
+-background-color
+-background-image				//aceita url
+-background-repeat				//(no-repeat, repeat-y, repeat-x)
+-background-position				//(center, left, right, top, bottom)
+-background-size				//(contain "fica dentro da borda", cover "preenche todo o espaço", porcentagem "aceita duas entradas uma pro x e outra pro y)
+-background-origin				//controle dos limites do background
+-background-clip				//controla até onde vai o conteudo do background
+-background-attachment				//(scroll "se for muito grande o conteudo, ao rolar com o mouse vai mostrando o resto da imagem do background", fixed "fica fixo a imagem")
+-background: linear-gradient			//misturar cores de fundo (tem radial-gradient também)
+
+POSICIONAMENTO
+-position: relative;				//por padrão tudo é static, relative permite usar alguns atributos para deslocar entre as direções o elemento
+	left: 100px;				//(precisa do position: relative;) desloca 100px para direita
+	right:100px;
+	top: 100px;
+	bottom:100px;
+	z-index:"CAMADA";			//defina nível da camada no eixo z (se tiver 3 elemento, um sobre o outro, o que tiver nível de camada mais alto fica por cima ex: z-index:4;)
+-position: absolute;				//permite usar mesmos recursos do relative (muda que o posicionamento é relativo à página ou ao grupo a que o elemento pertence)
+	right:0;				//deixa elemento grudado à direita da página ou do grpo que pertence (div...)
+-position: fixed;				//permite usar mesmos recursos de absolute e relative (quando vc dá scroll com o mouse ou diminui as dimensões da página, ele fica fixo e continua aprecendo mesmo sobre os outros elementos)
+
+display:flex;					//usado em uma caixa pai que contém caixas filho dentro, permite organizar as caixas filho em relação à caixa pai)
+	justify-content: space-between;		//usado na caixa pai, espaça as caixas filho em distancias iguas dentro da caixa pai
+	flex-direction: column;			//usado na caixa pai, quando é usado display: flex, as caixas se organizam em linha, esse comando faz voltar a ficar em coluna
+	justify-content: center;		//organiza tudo no centro da caixa pai
+	align-items: center;			//alinha itens no centro
