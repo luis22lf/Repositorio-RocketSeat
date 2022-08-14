@@ -63,3 +63,11 @@ display:flex;					//usado em uma caixa pai que contém caixas filho dentro, perm
 	flex-direction: column;			//usado na caixa pai, quando é usado display: flex, as caixas se organizam em linha, esse comando faz voltar a ficar em coluna
 	justify-content: center;		//organiza tudo no centro da caixa pai
 	align-items: center;			//alinha itens no centro
+(display flex é usado quando não se tem muitas áreas da tela para se trabalhar, poucos elementos e de fácil organzação)
+
+display: grid;					//usado em um elemento pai (body por exemplo) para definir áreas dentro do elemento que outros elementos irão ocupar
+	grid-template-areas: "NOME""...";	//usado para criar linhas e colunas e definir um nome para cada área (no caso foi criado uma linha e duas colunas)
+	grid-template-rows: TAMANHO1...;	//define o tamanho de cada linha
+	grid-template-columns: Tamanho1...;	//define o tamanho de cada coluna
+	grid-area:NOME DA AREA;			//usado no ELEMENTO FILHO para definir a área que vai ser ocupada pelo elemento
+(quando há várias áreas a serem criadas para se trabalhar, é altamente recomendado usar grid)
