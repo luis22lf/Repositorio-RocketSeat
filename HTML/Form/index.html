@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autor" content="Lega">
+    <meta name="description" content="texto que aparece no google embaixo do titulo do site">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get" id="form1">
+        <fieldset><!--fieldset disable (desabilitaria envio do formlário)-->
+            <legend>Contato</legend>
+
+            <label for="nome">nome</label><!--texto. atributo for linka label ao input, quando clicar no label, o cursor vai aparecer no input-->
+            <input id="nome" list="nomes-sugeridos" type="text"><!--define tipo da entrada-->
+            <button type="submit" form="form1" name="enviar">Enviar</button>
+        </fieldset>
+    </form>
+
+    <datalist id="nomes-sugeridos">
+        <option>Luis</option>
+        <option>Felipe</option>
+        <option>Ferreira</option>
+    </datalist>
+
+
+    <form action="">
+        <input type="password"
+            pattern="[0-9a-fA-F]{4,8}"
+            minlength="4"
+            maxlength="8"
+            size="8">
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

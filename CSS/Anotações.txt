@@ -11,7 +11,7 @@ display: inline					//muda comportamento do elemento para inline (inline width e
 SELETORES
 
 *						//altera propriedades de todos os elementos da página (* {...})
-ELEMENTO, ELEMENTO				//altera propriedades de dois ou mais elementos (h1, h2 {...})
+ELEMENTO, ELEMENTO				//altera propriedades de dois ou mais elementos ex:(h1, h2 {...})
 .ELEMENTO					//alterar classe
 #ELEMENTO					//alterar id
 
@@ -71,3 +71,21 @@ display: grid;					//usado em um elemento pai (body por exemplo) para definir á
 	grid-template-columns: Tamanho1...;	//define o tamanho de cada coluna
 	grid-area:NOME DA AREA;			//usado no ELEMENTO FILHO para definir a área que vai ser ocupada pelo elemento
 (quando há várias áreas a serem criadas para se trabalhar, é altamente recomendado usar grid)
+
+
+FONT-PROPERTIES
+Referências: https://www.w3.org/TR/css-fonts-3/		https://fonts.google.com/	https://css-tricks.com/snippets/css/using-font-face-in-css/
+
+-font-family					//define tipo de fonte, caso não haja, utiliza uma segunda ou terceira opção (fallback) ex(font-family: "Times New Roman", Times, serif;)
+-font-weight					//peso da fonte, consultar referência para exemplos (dependendo da fonte, alguns pesos não surtirão efeito)
+-font-style					//estilo da fonte (normal, itálico ou obliquo)
+-font-size					//tamanho da fonte
+-@import url('URL DA FONTE');			//importar fontes (usado no css) (tem como usar peli <link> no htm, consultar referência)
+-font-variant					//altera um pouco a fonte (https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant)
+-font-stretch					//alarga ou encolhe a fonte (https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch)
+-letter-spacing					//espaçamento entre letras (https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+-line-height					//espaço entre linhas (https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
+-text-transform					//Define quais letras ficarão em maiúsculo (https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+-text-decoration				//decoração do texto com sublinhado (https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+-text-align					//alinhamento (https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+-text-shadow					//sombreamento (https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)

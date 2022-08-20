@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Roboto:wght@300&display=swap');
+
+p1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+}
+
+p2 {
+    font-family: 'DynaPuff', cursive;
+    font-size: 35px;
+}
+
+p3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-variant: small-caps slashed-zero; /*altera um pouco a fonte*/
+    font-stretch: expanded;/*larga ou encolhe a fonte*/
+    font-size: 35px;
+    letter-spacing: 8px;/*espaçamento entre letras*/
+}
+
+p4 {
+    line-height: 30px; /*espaço entre linhas*/
+    text-transform: capitalize;/*Define quais letras ficarão em maiúsculo*/
+    text-decoration: underline;/*decoração do texto com sublinhado*/
+    text-align: center;
+    text-shadow: 1px 1px 1px red;
+}
