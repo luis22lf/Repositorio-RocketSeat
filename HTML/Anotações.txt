@@ -2,7 +2,7 @@
 
 
 -tabindex="INDICE"							//define ordem dos elementos que serão selecionados ao pressionar TAB (ex:tabindex="3", terá que ser pressionado TAB 3x para selecionar o elemento)
-
+-<script src="CAMINHO"> </script>					//linkar arquivo js ao html
 -<em>TEXTO</em>								//destaca texto digitado (usado em conjunto com alguma tag para texto)
 -<br/>									//quebra de linho no texto
 -<h1></h1>								//títulos (h1 só um por página)
@@ -66,7 +66,7 @@ para chamar datalist no input é só chamar o atributo 'list="NOME"'
 	autocomplete=""							//o navegador vai ajudar a completar com base no você mais digita ex(autocomplete="email")
 	autofocus							//foco automático (só funciona um por página)
 	disable								//desabilita
-	value=""							//valor
+	value=""							//valor do input
 	readonly							//somente leitura, não dá pra digitar nada
 	form="NOME"							//linka com form (precisa de alguma tag como name="" pra poder acessar/modificar caracteristicas depois)
 	required							//obriga a preencher algum valor no input
@@ -97,5 +97,40 @@ Quando for usado input do tipo file, o form precisa seguir a seguinte estrutura:
 
   <input type="checkbox">						//permite selecionar um valor para ser enviado
 	checked								//inicia selecionado
+	value=""							//usado para definir valor para input (ao selecionar um checkbox dá pra saber qual foi selecionado pelo value que vai ser enviado pelo form)
 
   <input type="hidden">							//não aparece ao usuário (para enviar alguma informação sem que que apareça ao usuário)
+
+  <input type="radio">							//tipo um ckechbox mas só pode ter um único item selecionado dentro de um grupo de opções
+
+-<textarea>								//textos grandes com mais de uma linha
+  	id=""
+	name=""
+	row="" e cols=""						//define qtde de linhas e colunas (tamanho da textarea)
+	maxlength e minlength
+	wrap="on", "off", "hard", "soft"(padrao)			//embrulhar texto (se texto for maior que campo, wrap ligado vai fazer uma quebra de linha e tentar encaixar no espaço o texto)
+	todos os comuns aos input
+
+-<select								//menu de opções (dropdownMenu do flutter)
+	multiple							//variavel boleana que permite selecionar mais de uma opção
+	size=""								//quantidade de itens que irão aparecer, demais tem que dar scroll para visualizar
+>
+	<optgroup label="">						//opcional (cria um grupo de options, usado para organizar as opções em dois ou mais grupos) label deixa algum texto visivel para dar um nome ao grupo
+	<option>							//opções que menu terá
+
+  <input type="search">							//campo de busca
+	list / <datalist>
+	pattern
+	aria-label							//igual label só esse não aparece para o usuáro
+
+  <input type="number">							//entrada numérica
+	min="" / max=""
+	step =""							//passo (incremento/decremento)
+	list
+
+  <input type="range">							//potenciômetro
+	min=""
+	max=""
+	step=""	
+
+  <input type="date"> / <input type="datetime-local">			//data / data e hora (tem type="week", "month", "day"..)
