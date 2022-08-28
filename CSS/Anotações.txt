@@ -3,17 +3,19 @@ fontsize:					//altera tamanho da fonte
 background:					//altera cor de fundo
 @import						//importar fontes (para aplicar ao elemento é font-family)
 !important					//sobrescreve a propriedade independente do peso da especificidade (ex color: blue !important)
-width: calc(100% - 80px);			//responsividade
-box-sizing: border-box				//para calcular o tamanho de uma box pela distância entre bordas (por padrão é calculado pelo tamanho do conteúdo e ao adicionar padding, o tamanho pode se alterar)
-display: block					//muda comportamento de elemento inline para block (que ocupa linha toda e força próximo elemento a ficar embaixo)
-display: inline					//muda comportamento do elemento para inline (inline width e height não funcionam e somente valores horizontais de margin, padding e border)
+width: calc(100% - 80px);	//responsividade
+box-sizing: border-box		//para calcular o tamanho de uma box pela distância entre bordas (por padrão é calculado pelo tamanho do conteúdo e ao adicionar padding, o tamanho pode se alterar)
+display: block				//muda comportamento de elemento inline para block (que ocupa linha toda e força próximo elemento a ficar embaixo)
+display: inline				//muda comportamento do elemento para inline (inline width e height não funcionam e somente valores horizontais de margin, padding e border)
 
 SELETORES
 
-*						//altera propriedades de todos os elementos da página (* {...})
-ELEMENTO, ELEMENTO				//altera propriedades de dois ou mais elementos ex:(h1, h2 {...})
+*							//altera propriedades de todos os elementos da página (* {...})
+ELEMENTO, ELEMENTO			//altera propriedades de dois ou mais elementos ex:(h1, p {...})
 .ELEMENTO					//alterar classe
-#ELEMENTO					//alterar id
+#NOMEID						//alterar id
+[ATRIBUTO]					//altera propriedades de elementos que tem o atributo ex com title:([title] {})
+h1: hover					//altera propriedades de h1 por exemplo quando o mouse fica sobre o elemento
 
 
 PESQUISAR
