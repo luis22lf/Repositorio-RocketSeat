@@ -269,3 +269,88 @@ pega a primeira linha de um texto.
 p::first-line {
 	font-weight: bold;
 }
+<br><br>
+
+## Layout
+##### div é um elemento block (ocupa toda a linha e o próximo elemento acaba tendo que ir para a linha de baixo)
+(transforma em tipo inline e joga para esquerda)<br>
+\<div style="float:left">esquerda\</div><br> 
+
+(transforma em tipo inline e joga para direita)<br>
+\<div style="float:right">direita\</div> <br>
+
+(limpa modificações e volta ao normal flow (block))<br>
+\<div style="clear:both">normal flow\</div> <br>
+<br><br>
+
+
+## TERMINOLOGIA
+
+Flex container (estrutura que terá algum conteúdo dentro)
+
+Flex item (itens do container)
+
+Nesting (item com outros itens dentro ex: uma div contendo outras divs)
+
+Axis (eixos x e y)
+
+main (eixo principal, flex o principal é o X)
+- start e end
+
+cross (eixo secundário)
+- start e end
+
+Flex sizing
+- tamanho flexível para preenchimento dos espaços do flex container
+
+
+
+## PROPRIEDADES FLEX CONTAINER
+-flex-direction (altera a direção)
+- row | row-reverse | column | column-reverse
+
+-flex-wrap (possibilita usar multi linhas cada uma como sendo um novo flex container "se não couber tudo numa linha cria uma linha nova e joga conteúdo restante abaixo")
+- flex-wrap: wrap;
+
+-flex-flow (shorthand permite usar flex-direction e flex-wrap na mesma linha)
+- flex-flow: column wrap;
+
+-justify-content (alinhamento dos elementos dentro do container | distribuição dos elementos)
+- flex-start (inicia no começo do eixo main)
+- flex-end (inicia no fim do eixo main)
+- center (inicia no centro do eixo main)
+- space-around (espaço ao redor de cada elemento, como se fosse uma margem)
+- space-between (espaço entre elementos, espaça igualmente conforme espaço disponível)
+- space-evenly (espaço entre elementos e entre limites igualmente espaçados)
+
+-align-items (alinhamento dos elementos no eixo cruzado)
+- stretch (estica item para preencher todo o eixo cruzado)
+- flex-start (deixa elementos no início do eixo cruzado)
+- flex-end (deixa elementos no fim do eixo cruzado)
+- center (deixa elementos no centro do eixo cruzado)
+
+-gap (espaço entre elementos)
+- unidades fixas: px, pt
+- unidades flexíveis: %, em, rem
+<br><br>
+
+## Propriedades dos itens
+### flex-basis
+- define tamanho ou altura (dependendo do eixo principal) como no width e height
+
+### flex-grow (crescimento dos itens)
+- flex-grow: 0; (não faz nada, zero é o valor padrão)
+- flex-grow: 1; (faz com que o item preencha todo o espaço vazio do container, se aplicado a mais de um item, divide em partes iguais o espaço)
+##### obs: o valor inserido é a fração do espaço vazio que vai ser atribuido ao elemento
+<br>
+
+### flex-shrink (encolhimento do item)
+- flex-shrink: 0; (não surte efeito)
+
+### flex 
+(shorthand, um único valor corresponde ao flex-grow, um valor com unidade corresponde ao flex-basis e o outro ao flex-shrink)
+- flex: 1 0 0px;
+
+### order (ordenar elementos no container)
+- order: 1;
+##### o valor padrão para todos elementos é zero, ao definir um valor maior para um item, ele se deslocará para o fim da lista e, um valor menor, fará se deslocar para o início

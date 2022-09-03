@@ -1,0 +1,24 @@
+/*
+crie um layout com 2 colunas, uma ao lado da outra
+a coluna da esquerda deverá ter 25% de tamanho e a coluna da direita deverá ocupar todo o restante
+faça uma separação de 1rem entre os elementos
+*/
+
+.container {
+    display: flex;
+    gap: 1rem;
+}
+
+aside {
+    display: flex;
+    background: plum;
+    flex-basis: 25%;
+    height: 90vh;
+}
+
+main {
+    background: wheat;
+    display: flex;
+    flex-grow: 1;
+    height: 90vh;
+}
