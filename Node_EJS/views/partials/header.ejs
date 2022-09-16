@@ -1,0 +1,14 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">EJS</a> <!-- logo que leva a pagina inicial -->
+    
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="/"> Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sobre"> About</a></li>
+            
+        </ul>
+    </nav>
+    <!-- a partir do conteudo do objeto definido na inclusão dentro de about dá pra definir html -->
+    <!-- nota-se que está '<%=' e não mais '<%-' -->
+    <p>Página: <%= typeof pagina != 'undefined'? pagina:'Home' %></p>
+</header>
