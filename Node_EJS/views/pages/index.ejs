@@ -10,6 +10,16 @@
         </div>
     </main>
 
+    <ul>
+        <% qualitys.forEach(function(quality){ %>
+            <li>
+                <strong><%= quality.title %></strong><%= quality.message %>
+            </li>
+        <% }); %>
+        
+    </ul>
+
     <%- include('../partials/footer'); %>
+
 </body>
 </html>

@@ -7,7 +7,25 @@ app.set("view engine", "ejs"); //passa como parametro ferramente para restilizar
 
 //cria rota
 app.get("/", function(req, res){ //res -> resposta
-    res.render("pages/index"); //renderiza pagina (necessita estar dentro de uma pasta chamada views)
+    const items = [
+        {
+            title: "D",
+            message: "uro"
+        },
+        {
+            title: "V",
+            message: "eiudo"
+        },
+        {
+            title: "P",
+            message: "ulsante"
+        },
+        {
+            title: "C",
+            message: "abeçudo"
+        }
+    ];
+    res.render("pages/index", {qualitys: items}); //renderiza pagina (necessita estar dentro de uma pasta chamada views)
 })
 
 //cria rota
@@ -19,4 +37,4 @@ app.get("/sobre", function(req, res){
 //app carrega todo o express
 //listen vai escutar porta 8080
 app.listen(8080);
-console.log("rodando")
+console.log("rodando");
