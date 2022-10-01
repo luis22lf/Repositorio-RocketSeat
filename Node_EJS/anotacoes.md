@@ -39,7 +39,7 @@ console.log("rodando")
 ### 4 executar no terminal comando "node server" para rodar aplicação a partir do arquivo principal (server) e digitar
 ### "localhost:8080" no navegador (8080 é a porta escolhida, poderia ser outra)
 ----------------------------------------------------------
-#### Caso tenha algum elemento que tenha interesse em reaproveitar em outro arquivo é possível criar um arquivo .ejs com esse elemento e onde quiser utilizá-lo basta inserir "<%- include("NOME_DO_ARQUIVO") %>"
+#### Caso tenha algum elemento que tenha interesse em reaproveitar em outro arquivo é possível criar um arquivo .ejs com esse elemento e onde quiser utilizá-lo basta inserir "<%- <%-include("NOME_DO_ARQUIVO") %>"
 
 
 

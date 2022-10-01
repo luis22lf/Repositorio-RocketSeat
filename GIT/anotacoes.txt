@@ -1,0 +1,31 @@
+CONFIGURAÇÕES INICIAIS GIT
+
+	git config --global user.name "Seu nome completo entre aspas"
+	git config --global user.email seuemailaqui@dominio.com
+
+em cada commit essa informação será utilizada, e é carimbada de forma imutável nos commits que você começa a criar.
+Caso você queira substituir essa informação para um projeto específico, apenas rode o comando sem a opção --global dentro daquele projeto.
+
+
+Caso queira verificar as suas configurações, apenas rode o comando abaixo:
+
+ 	git config --list
+
+
+Inicia repositório
+	git init
+
+adiciona todos arquivos em um 'encapsulamento'
+	git add .
+
+cria comentário e joga dados para repositório local
+	git commit -m "comentário do commit"
+
+
+git log (mostra informações dos commits)
+	git log (informações do commit atual)
+	git log 5 	(informações dos 5 últimos commits)
+	git log --since=2020-10-01 (informações dos commits desde a dada)
+	git log --until=2020-10-01 (informações dos commits anteriores a data)
+	git log --author=luis (commits do autor)
+	git log grep="bugfix" (todos os commits que contém 'bugfix' na mensagem do commit)
