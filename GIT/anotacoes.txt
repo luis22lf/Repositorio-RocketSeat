@@ -29,3 +29,58 @@ git log (mostra informações dos commits)
 	git log --until=2020-10-01 (informações dos commits anteriores a data)
 	git log --author=luis (commits do autor)
 	git log grep="bugfix" (todos os commits que contém 'bugfix' na mensagem do commit)
+
+
+mostra todas as modificações feitas nos arquivos do repositório (diferenças)
+	git diff (analisa arquivos no working directory)
+	git diff --staged (analisa arquivos no staged area (quando usa git add))
+
+
+excluindo arquivo permanentemente
+	git rm arquivo.formatoArquivo
+
+
+renomeando arquivos
+	git mv nomeatual.txt novonome.txt
+
+
+movendo arquivos
+	git mv arquivoquevaimover nomedodiretório/arquivoquevaimover
+
+
+Desfazendo modificações do arquivo
+	git restore nomedoarquivo
+
+Retirando arquivos do staged area (pós git add)
+	git restore --staged nomeArquivo (ex: git restore --staged *)
+
+
+Corrigindo o último commit (evitar usar)
+	git commit --amend -m "nova mensagem" (após fazer alterações necessárias, vai jogar no ultimo commit com nova mensagem)
+
+
+
+Recuperando arquivos
+pega arquivo de um commit passado e tras de volta
+(hash é o nome do commit que vai pegar o arquivo)
+	git checkout HASH -- nomedoarquivo
+
+
+
+Removendo arquivos não rastreados (exclui permanentemente)
+	git clean
+	git clean -f (apaga imediatamente)
+
+
+Revertendo um commit
+	git revert HEAD~5 (reverte 5 commits atrás)
+	git revert 7f121d7 (reverte para um commit especifico)
+
+
+Envia direto para repositorio local (usado quando não é criado novos arquivos, somente modificado)
+	git commit -am "lembre que podemos usar várias opções na mesma declaração"
+
+
+
+Remove arquivos que deveriam ser ignorados pelo .gitignore
+	git rm -r --cached
