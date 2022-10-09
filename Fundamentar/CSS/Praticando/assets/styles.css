@@ -1,0 +1,56 @@
+h1 {
+    border: 1px solid red; /*tamanho, tipo e cor da borda*/
+    margin: 20px;/*espaço do elemento em relação ao próximo*/
+    padding: 60px;/*espaço dentro do elemento*/
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+}
+
+.box1 {
+    background-color: black;
+    position: relative;
+    left: 80px;
+    top: 50px;
+}
+
+.box2 {
+    background-color: blue;
+    position: fixed;
+    top: 400px;
+}
+
+.box3 {
+    background-color: blueviolet;
+}
+
+
+
+/*DISPLAY FLEX*/
+
+.container {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}

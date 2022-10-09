@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: grid;
+    grid-template-areas: /*cria linhas e colunas e define nomes para cada área (3 linhas e 2 colunas)*/
+        "header header"
+        "main aside"
+        "footer footer";
+
+    grid-template-rows: /*define tamanho das linhas (da primeira para a última*/
+        50px
+        1fr /*pega todo o espaço sobrando*/
+        40px; 
+    
+    grid-template-columns: /*define tamanho das colunas (da primeira para a última*/
+        1fr
+        20vw; /*20% da largura da tela*/
+}
+
+header {
+    grid-area: header; /*define área em que vai pertencer o elemento*/
+    background-color: green;
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+    padding: 0/*espaço nas verticais*/ 20px/*espaço nas laterais*/;
+
+}
+
+main {
+    grid-area: main;
+    background-color: red;
+}
+
+aside {
+    grid-area: aside;
+    background-color: blue;
+}
+
+footer {
+    grid-area: footer;
+    background-color: gray;
+}
