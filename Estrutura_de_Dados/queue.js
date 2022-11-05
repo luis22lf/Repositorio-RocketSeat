@@ -3,7 +3,7 @@
 //O primeiro a entrar é o primeiro a sair
 
 //enqueue() - adiciona elemento ao final da fila
-//daqueue() - remove primeiro elemento a entrar na fila
+//dequeue() - remove primeiro elemento a entrar na fila
 
 
 //modelando

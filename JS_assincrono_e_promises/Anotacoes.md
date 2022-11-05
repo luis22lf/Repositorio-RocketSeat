@@ -51,7 +51,7 @@ Uma promessa poderá ser:
 
     promessa.then(result => console.log(result))
 
-    ------------------------------------------------
+    ******************
 
     // Promessa é rejeitada e usamos o catch() para capturar o erro
     console.log('pedir uber') 
@@ -65,7 +65,7 @@ Uma promessa poderá ser:
         .then(result => console.log(result))
         .catch(erro => console.log(erro))
     
-    ---------------------------------------------------
+    ******************
 
     let aceitar = true
     console.log('pedir uber') 
@@ -95,3 +95,98 @@ fetch (pegar)
     .then(res => res.json()) //terceira promessa
     .then(d => console.log(d)) //quarta promessa
     .catch(error => console.log('erro')) //caso erro em alguma promessa
+
+
+
+### Promise com axios
+    //necessário importar axios
+
+    import axios from "axios";
+
+    axios.get("https://api.github.com/users/maykbrito") //devolve promessa
+    .then(response => axios.get(response.data.repos_url))
+    .then(repos => console.log(repos.data))
+    .catch(error => console.log('erro'))
+
+
+
+### Executando Promessas em Paralelo com Promise all
+
+    import axios from "axios";
+
+    Promise.all([ //array de promessas
+    axios.get("https://api.github.com/users/maykbrito"),
+    axios.get("https://api.github.com/users/maykbrito/repos")
+    ])
+    .then( response => {
+        console.log(response[0].data.login);
+        console.log(response[1].data.length);
+    })
+    .catch((error) => console.log(error.message));
+
+
+-------------------------------------------------------------------------------------
+
+
+## Async / Await
+maneira de escrever promises
+
+    const promessa = new Promise (function (resolve, reject){
+    return resolve('ok')
+    })
+
+    //esse trecho substitui o código comentado
+    async function start (){
+    try{
+        const result = await promessa
+        console.log(result)}
+    catch(e){
+        console.log(e)
+    }
+    finally{
+        console.log('sempre irei executar')
+    }
+    }
+
+    start ()
+
+    // promessa
+    // .then(function(resposne){
+    //   console.log(resposne)
+    // })
+    // .catch(function(error){
+    //   console.log(error)
+    // })
+    // .finally(function(){
+    //   console.log('sempre irei executar')
+    // })
+
+
+
+### Async / Await com Fetch (mais uma forma de user proimise...)
+
+    async function start () {
+        const url = "https://api.github.com/users/maykbrito"
+        const user = await fetch(url).then (r => r.json())
+        const userRepos = await fetch(user.repos_url).then(r => r.json())
+        console.log(userRepos)
+    }
+
+    start().catch(e => console.log(e))
+
+
+### Async / Await com Axios
+
+    import axios from 'axios'
+
+    async function fetchRepos() {
+        try{
+            const user = await axios.get('https://api.github.com/users/maykbrito')
+            const repos = await axios.get(user.data.repos_url)
+            console.log(repos.data)
+        }catch(e) {
+        console.log(e)
+        }
+    }
+
+    fetchRepos()
