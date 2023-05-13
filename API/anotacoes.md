@@ -147,7 +147,7 @@ Fetch -> interface js para acerssar e manipular partes do pipeline HTTP
     .catch(error => console.error(error))
 
 ### GET COM PARAMETROS
-#### Necessário criar estreutura htm com ids UserName, UserCity e UserAvatar
+#### Necessário criar estrutura html com ids UserName, UserCity e UserAvatar
     fetch(`${url}/1`)
     .then(response => response.json())
     .then(data => {
@@ -231,5 +231,21 @@ necessário utilizar no html:
     .then(Response => {
         apiResult.textContent = JSON.stringify(Response.data)
     })
+    .catch(error => console.error(error))
+    }
+
+
+### PUT
+    function updateUser(id, userUpdated) {
+    axios.put(`${url}/${id}`, userUpdated)
+    .then(response => console.log(response))
+    .catch(error => console.error(error))
+    }
+
+### DELETE
+
+    function deleteUser (id) {
+    axios.delete(`${url}/${id}`)
+    .then(response => console.log(response))
     .catch(error => console.error(error))
     }

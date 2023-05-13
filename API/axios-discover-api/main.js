@@ -36,7 +36,26 @@ function getUser(id) {
     .catch(error => console.error(error))
 }
 
+function updateUser(id, userUpdated) {
+    axios.put(`${url}/${id}`, userUpdated)
+    .then(response => console.log(response))
+    .catch(error => console.error(error))
+}
 
+const userUpdated = {
+    name: "Xuliana",
+    avatar: "https://picsum.photos/200/300",
+    city: "Metaland"
+}
+
+function deleteUser (id) {
+    axios.delete(`${url}/${id}`)
+    .then(response => console.log(response))
+    .catch(error => console.error(error))
+}
+
+//updateUser(2, userUpdated)//modifica dados
 getUsers()//Exibe todos dados
-getUser(5)
+getUser(1)
 addNewUser(newUser)
+deleteUser(2)
